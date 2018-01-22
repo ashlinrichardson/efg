@@ -1,0 +1,258 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>The Elliot Freedman Group
+</title>
+<!--
+ -- Elliot Freedman, Paul Mason, Ashlin Richardson, Brent Jarvis</title>
+--> 
+
+<style>
+body{margin:0;}
+body{font-family: Arial; color: yellow; }
+footer{background-color: black; color: yellow; padding: 5px 5px 5px 5px}
+.nav{overflow: hidden; color: blue; background-color: black; -webkit-text-decoration-color: black; text-decoration-color: black;} 
+.nav a{float: left; display: block; color:  blue; text-align: center; padding: 5px 5px; -webkit-text-decoration-color: black; text-decoration-color: black; font-size: 17px;}
+.nav a:hover{ background-color: white; color: blue; -webkit-text-decoration-color: black; text-decoration-color: black; }
+.nav a.active {background-color: white; color: blue; -webkit-text-decoration-color: black; text-decoration-color: black;}
+.nav .icon{ display: none;}
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon { float: right; display: block; }
+}
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon{ position: absolute; right: 0; top: 0; }
+  .nav.responsive a{ float: none; display: block; text-align: left;}
+}
+h1{color: yellow; font-family: 'Verdana Bold Italic', sans-serif; font-style: italic; font-size: 36px; font-weight: 600; line-height: 22px; margin: 5px 5px 5px; -webkit-text-decoration-color: black; text-decoration-color: black; background-color: black; }
+h2{color:  yellow; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+h3{color: yellow; font-style: 'italic'; font-family: 'Verdana Bold', sans-serif; font-size: 22px; font-weight: 600; line-height: 22px; margin: 5px 5px 5px; -webkit-text-decoration-color: black; text-decoration-color: black; background-color: black; }
+h4{color:  yellow; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; font-weight: 400; line-height: 18px; margin: 2px 2px 2px; }
+.subheader { font-size: 26px; font-weight: 300; color:  yellow; margin: 0 0 24px; -webkit-text-decoration-color: black; text-decoration-color: black;}
+p{color:  yellow; font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 32px; margin: 0 0 24px; }
+a:hover { color: black; -webkit-text-decoration-color: black; text-decoration-color: black; }
+.email { color: #8b9dc3;}
+</style>
+
+
+<script>var delay_time = 1888;
+var x = 0;
+ </script>
+
+
+<script>
+var has_local_storage = false;
+
+try{
+  var a = localStorage.getItem('efg_state')
+  localStorage.setItem('efg_state',a)
+  has_local_storage = true;
+}
+catch(e){
+  has_local_storage = false;
+}
+
+if(has_local_storage){
+  if(localStorage.getItem('efg_state') == null){
+    localStorage.setItem('efg_state', 'cms')
+  }
+}else{
+  alert('please update your browser. HTML-5 required');
+
+}
+</script>
+
+
+<script>
+/* Toggle between adding and removing the "responsive" class to nav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+</head>
+<body style="background-color: black;"> <!--rgb(255, 255, 255)">
+-->
+<script>
+// set home content by calling home() ?
+
+function set_active(a){
+  var m ='set_active'
+  console.log('set_active()')
+  if(has_local_storage){
+    console.log(localStorage.getItem('efg_state'))
+    localStorage.setItem('efg_state', a)
+  }
+    document.getElementsByClassName('active')[0].classList.remove('active');
+    document.getElementByName(a).classList.add('active')
+}
+
+
+</script>
+<p style="font-size:1px"></p>
+<div style="width: 1111px;"> 
+<h1>The Elliot Freedman Group</h1>
+</div>
+<div class="nav" id="myTopnav" style="position:relative;">
+
+<table style="position:relative;">
+<tbody><tr align="right">
+<td valign="bottom" valign="left">
+<a id="cms" href="index.html" onclick="set_active(&#39;cms&#39;)">
+  <table>
+  <tr><td align="bottom"><h3>engage</h3></td></tr>
+  </tbody></table>
+</a>
+</td>
+
+
+<td valign="bottom"><table><tbody><tr><td></td></tr><tr><td>
+  <a id="bio" href="index.html" onclick="set_active(&#39;bio&#39;)"><h3>manage</h3></a>
+</td></tr></tbody></table></td>
+<td valign="bottom"><table><tbody><tr><td></td></tr><tr><td>
+<a id="reviews" href="index.html" onclick="set_active(&#39;testimonials&#39;)"><h3>assess</h3></a>
+</td></tr></tbody></table></td>
+<td valign="bottom"><table><tbody><tr><td></td></tr><tr><td>
+<a id="contact" href="index.html" onclick="set_active(&#39;contact&#39;)"><h3>write</h3></a>
+</td></tr></tbody></table></td>
+<td valign="bottom"><table><tbody><tr><td></td></tr><tr><td>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction(); return false;">&#9776;</a> <!-- onClick="function(); return false;"-->
+</td></tr></tbody></table></td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="vis_data">
+<img src="00.png" id="my_png" width="1111px">
+</div>
+
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vw2CxXg6QTk?rel=0&amp;start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen autoplay></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kL8yq402aX4?rel=0&amp;start=5" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jHrJr7kXVr4?rel=0&amp;start=172" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/38eObSuMbq4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+-->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/KpOHxnaTttY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+-->
+
+<div id="my-content" style="padding-left:16px">
+<!--  
+
+<div style="width: 666px;"> 
+  The Elliot Freedman Group is a jazz-rock fusion band based in Victoria, British Columbia, Canada.
+  </div>
+-->
+
+</div>
+<footer id="footer">
+  <div id="copyright_text"">&nbsp;Copyright © 2018 The Elliot Freedman Group</div>
+</footer>
+<script>
+var x = 0;
+var cms_images = ["10.jpg",  "11.jpg", "13.jpg"];
+var bio_images = [];
+bio_images[0] = "00.jpg";
+//bio_images[1] = "01.png";
+bio_images[1] = "02.png";
+bio_images[2] = "04.png";
+bio_images[3] = "05.png";  // 1111 x 645
+function cms(){
+  x = 0;
+
+  document.getElementById('vis_data').innerHTML='"<img src="10.jpg" id="my_png" width="1111px">';
+  document.getElementById('my-content').innerHTML = ''; 
+
+  /*
+ <!--<div style="width: 1111px; height: 111px">The Elliot Freedman Group is a jazz-rock fusion band based in Victoria, British Columbia, Canada. </div>-->
+ */
+         
+          var images = cms_images;
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("my_png").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("my_png").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, delay_time);
+          }
+
+          window.onload = startTimer()
+}
+
+function bio(){
+  x = 0;
+
+
+document.getElementById('vis_data').innerHTML='"<img src="00.jpg" id="my_png" width="1111px">';
+//document.getElementById("my_png").src="01.png";
+//alert('bio');
+
+  document.getElementById('my-content').innerHTML  ='';
+
+          var images = bio_images;
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("my_png").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("my_png").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, delay_time);
+          }
+
+          window.onload = startTimer()
+
+
+
+
+}
+function testimonials(){ //assess
+document.getElementById('vis_data').innerHTML='<iframe width="1111" height="645" src="https://www.youtube.com/embed/vw2CxXg6QTk?rel=0&amp;start=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen autoplay></iframe>';
+
+//document.getElementById('vis_data').innerHTML='"<img src="03.png" id="my_png" width="1111px">';
+document.getElementById('my-content').innerHTML  ='';
+}
+
+function contact(){
+ document.getElementById('vis_data').innerHTML='';
+  document.getElementById('my-content').innerHTML  ='<div>For booking information please write <a href="mailto:elliot.freedman@gmail.com">elliot.freedman@gmail.com</a></div><br>Thank you,<br><br>Elliot';
+//  and The Elliot Freedman Group<br><br>Elliot Freedman, guitar<br>Paul Mason, drums<br>Ashlin Richardson, bass<br> Brent Jarvis, piano';
+        
+}
+
+var s = 'cms';
+if(has_local_storage){
+  s = localStorage.getItem('efg_state')
+}
+if(s=='cms'){
+  cms()
+}
+else if(s=='testimonials'){
+  testimonials()
+}
+else if(s=='bio'){
+  bio()
+}
+else if(s=='contact'){
+  contact()
+}else{
+ cms()
+}
+</script>
+
+
+
+
+</body></html>
